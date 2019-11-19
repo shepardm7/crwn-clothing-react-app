@@ -19,6 +19,9 @@
   "plugins": ["react"],
   "rules": {
     "quotes": [2, "single"],
-    "react/jsx-filename-extension": [0]
+    "react/jsx-filename-extension": [0],
+    "comma-dangle": "off",
+    "object-curly-newline": "off",
+    "react/prop-types": [0]
   }
 }
