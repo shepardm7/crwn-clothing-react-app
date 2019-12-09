@@ -4,11 +4,12 @@
     "es6": true,
     "node": true
   },
-  "extends": ["airbnb"],
+  "extends": ["airbnb", "prettier"],
   "globals": {
     "Atomics": "readonly",
     "SharedArrayBuffer": "readonly"
   },
+  "parser": "babel-eslint",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -16,8 +17,9 @@
     "ecmaVersion": 2018,
     "sourceType": "module"
   },
-  "plugins": ["react"],
+  "plugins": ["react", "prettier"],
   "rules": {
+    "prettier/prettier": ["warn"],
     "quotes": [2, "single"],
     "react/jsx-filename-extension": [0],
     "comma-dangle": "off",
@@ -27,6 +29,8 @@
     "react/jsx-props-no-spreading": "off",
     "react/no-unused-state": "warn",
     "jsx-a11y/click-events-have-key-events": "off",
-    "jsx-a11y/no-static-element-interactions": "off"
+    "jsx-a11y/no-static-element-interactions": "off",
+    "arrow-parens": "off",
+    "jsx-a11y/label-has-associated-control": "off"
   }
 }
