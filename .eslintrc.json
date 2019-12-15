@@ -26,6 +26,7 @@
     "comma-dangle": "off",
     "import/prefer-default-export": "off",
     "import/no-named-as-default": "off",
+    "import/no-named-as-default-member": "off",
     "no-shadow": "off",
     "object-curly-newline": "off",
     "react/prop-types": [0],
