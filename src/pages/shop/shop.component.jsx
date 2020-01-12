@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import * as PropTypes from 'prop-types';
-import { fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
+import { fetchCollectionsStart, fetchCollectionsStartAsync } from '../../redux/shop/shop.actions';
 import WithSpinner from '../../components/with-spinner/with-spinner.component';
 import CollectionsOverviewContainer from '../../components/collections-overview/collections-overview.container';
 import CollectionContainer from '../collection/collection.container';
@@ -11,8 +11,9 @@ import CollectionContainer from '../collection/collection.container';
 class ShopPage extends React.Component {
 
 	componentDidMount() {
-		const { fetchCollectionsStartAsync } = this.props;
-		fetchCollectionsStartAsync();
+		const { fetchCollectionsStart } = this.props;
+		// fetchCollectionsStartAsync();
+		fetchCollectionsStart()
 	}
 
 	render() {
@@ -28,9 +29,9 @@ class ShopPage extends React.Component {
 
 ShopPage.propTypes = { match: PropTypes.any };
 
-const mapDispatchToProps = {
-	fetchCollectionsStartAsync: fetchCollectionsStartAsync
-};
+const mapDispatchToProps = dispatch => ({
+	fetchCollectionsStart: () => dispatch(fetchCollectionsStart())
+});
 
 export default connect(
 	null,
